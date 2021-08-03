@@ -3,7 +3,7 @@ import React from 'react'
 interface IProps {}
 
 const CenterControl: React.FC<IProps> = () => {
-  return <div>Center Control</div>
+  return <div>Center Controllllll</div>
 }
 
 export default CenterControl
