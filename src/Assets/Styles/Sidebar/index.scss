@@ -11,4 +11,70 @@
     flex-direction: column;
     height: 100%;
   }
+  .navbar {
+    width: 100%;
+    .navbar-brand {
+      width: 240px;
+      height: 70px;
+      position: fixed;
+      top: 0;
+      padding: 0 25px 0 28px;
+      display: flex;
+      align-items: center;
+      > button {
+        display: inline-block;
+        line-height: 0;
+        border-radius: 0;
+      }
+      .btn {
+        font-size: 14px;
+        border-radius: 999px;
+        line-height: normal;
+        border: 0;
+        display: inline-block;
+        font-weight: 400;
+        text-transform: none;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+          -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+        }
+        .zmp3-logo {
+          width: 120px;
+          height: 40px;
+          display: inline-block;
+          background: url('../../Images/Logo/logo-light.svg') 50% / contain
+            no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-divide {
+  position: relative;
+  height: 1px;
+  &::after {
+    content: '';
+    border-top: 1px solid;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 0;
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  word-break: normal;
 }
