@@ -4,8 +4,8 @@
   z-index: 100;
   width: 240px;
   background-color: rgba(0, 0, 0, 0.05);
-  // padding-top: 70px;
-  padding-bottom: 54px;
+  padding-top: 70px;
+  // padding-bottom: 54px;
   .sidebar-wrapper {
     display: flex;
     flex-direction: column;
@@ -51,6 +51,44 @@
       }
     }
   }
+  .navbar-main {
+    position: relative;
+    margin-bottom: 15px;
+    .navbar-item {
+      font-weight: 700;
+      color: #32323d;
+      border-left: 3px solid transparent;
+      > a {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 7px 25px;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  margin-right: 10px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  line-height: 66%;
+  display: inline-block;
+  background-image: url('../../Images/Icon/my-song.svg');
+  &::before {
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-feature-settings: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak-as: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .sidebar-divide {
@@ -77,4 +115,38 @@ textarea {
   color: inherit;
   background-color: transparent;
   word-break: normal;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
