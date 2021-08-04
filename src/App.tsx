@@ -14,19 +14,16 @@ import Rose from 'Assets/Images/Background/rose.jpg'
 const listBg = [UI, Jennie, Jisoo, Lisa, Rose]
 
 const App = () => {
-  const [url, setUrl] = useState(UI)
-
   const getBackground = () => {
     return listBg[Math.floor(Math.random() * 5)]
   }
 
-  setTimeout(() => {
-    setUrl(getBackground())
-  }, 5000)
-
   return (
     <Fragment>
-      <div className="app-wrapper" style={{ backgroundImage: `url(${url})` }}>
+      <div
+        className="app-wrapper"
+        style={{ backgroundImage: `url(${getBackground()})` }}
+      >
         <Sidebar />
         <Player />
       </div>
