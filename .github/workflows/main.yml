@@ -13,8 +13,8 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAI1802 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MP3_TAI1802 }}'
           channelId: live
-          projectId: music-tai1802
+          projectId: mp3-tai1802
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
