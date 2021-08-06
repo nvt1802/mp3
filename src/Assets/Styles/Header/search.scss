@@ -1,0 +1,122 @@
+.search {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+}
+
+.search-container {
+  position: relative;
+  border-radius: 20px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.05);
+  .btn-search {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 999px;
+    line-height: normal;
+    border: 0;
+    display: inline-block;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    .ic-search {
+      position: absolute;
+      cursor: pointer;
+      font-size: 20px;
+      top: -5px;
+      left: 10px;
+      color: #757575;
+      line-height: 66%;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background-image: url('../../Images/Icon/search.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  .search-wrapper {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    right: 10px;
+    bottom: 0;
+    > input {
+      margin: 0;
+      display: inline-block;
+      width: 95%;
+      font-size: 16px;
+      color: #282828;
+      background-clip: padding-box;
+      border: 0;
+      position: relative;
+      top: 2px;
+      height: 26px;
+      padding: 5px 0;
+      line-height: 34px;
+      background-color: transparent;
+      word-break: normal;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.suggest-list {
+  position: absolute;
+  overflow: hidden;
+  width: 96%;
+  height: auto;
+  min-height: 0;
+  max-height: 601px;
+  background-color: #fffffe;
+  z-index: 5;
+  display: block;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 6px 0 rgb(32 33 36 / 28%);
+  padding: 13px 11px;
+  color: #32323d;
+}
+
+.suggest-item {
+  display: flex;
+  align-items: baseline;
+  border-radius: 4px;
+  padding: 8px 10px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .suggest-icon {
+    font-size: 16px;
+    color: #696969;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../Images/Icon/search.svg');
+    background-repeat: no-repeat;
+  }
+  .is-oneline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.is-collapse {
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%);
+  background-color: #fffffe;
+  border: 1px solid transparent;
+}

@@ -6,7 +6,7 @@ const MainMenu = () => {
       <ul className="navbar-menu">
         <li className="navbar-item">
           <a title="Cá Nhân" href="/">
-            <i className="icon" />
+            <i className="icon-sidebar icon-personal" />
             <span>Cá Nhân</span>
           </a>
         </li>

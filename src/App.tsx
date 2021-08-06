@@ -6,6 +6,8 @@ import Player from 'Components/Player'
 import Sidebar from 'Components/Sidebar'
 
 import UI from 'Assets/Images/Background/iu.jpg'
+import Main from 'Components/Main'
+import Header from 'Components/Header'
 // import Jennie from 'Assets/Images/Background/jennie.jpg'
 // import Jisoo from 'Assets/Images/Background/jisoo.jpg'
 // import Lisa from 'Assets/Images/Background/lisa.jpg'
@@ -17,7 +19,9 @@ const App = () => {
   return (
     <Fragment>
       <div className="app-wrapper" style={{ backgroundImage: `url(${UI})` }}>
+        <Header />
         <Sidebar />
+        <Main />
         <Player />
       </div>
     </Fragment>

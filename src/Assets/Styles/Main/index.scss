@@ -1,0 +1,17 @@
+.zm-box {
+  display: block;
+  background-color: unset !important;
+}
+.main-page {
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  position: relative;
+  width: calc(100% - 560px);
+  min-height: 100%;
+  .main-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+}
