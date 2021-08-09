@@ -86,3 +86,9 @@
   margin-right: 20px;
   background-image: url('../../Images/Icon/right.svg');
 }
+
+@media all and (max-width: 768px) {
+  .header {
+    left: 60px;
+  }
+}

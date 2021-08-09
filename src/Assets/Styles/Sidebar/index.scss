@@ -154,3 +154,24 @@ a {
 li {
   list-style-type: none;
 }
+
+@media all and (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  .navbar-brand {
+    width: 60px !important;
+    padding: 10px !important;
+  }
+  .zmp3-logo {
+    width: 40px !important;
+    height: 40px !important;
+    background: url('../../Images/Logo/logo600.png') 50% / contain no-repeat !important;
+  }
+  .navbar-item > a {
+    padding: 15px !important;
+    > span {
+      display: none;
+    }
+  }
+}
