@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const paths = [
   {
@@ -20,11 +20,12 @@ const paths = [
 ]
 
 const MainMenu = () => {
+  const location = useLocation()
   const [currentPath, setCurrentPath] = React.useState('/')
 
-  const handleClick = (value: any) => {
-    setCurrentPath(value)
-  }
+  useEffect(() => {
+    setCurrentPath(location.pathname)
+  }, [location])
 
   return (
     <nav className="navbar-main">
@@ -37,11 +38,7 @@ const MainMenu = () => {
                 currentPath === item?.path ? 'is-active' : ''
               }`}
             >
-              <Link
-                title="Cá Nhân"
-                to={item?.path}
-                onClick={() => handleClick(item?.path)}
-              >
+              <Link title="Cá Nhân" to={item?.path}>
                 <i className={`icon-sidebar ${item?.icon}`} />
                 <span>{item?.name}</span>
               </Link>
