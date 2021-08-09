@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import routes, { RouteWithSubRoutes } from 'Pages/route'
 
 import 'Assets/Styles/index.scss'
 
@@ -8,22 +10,24 @@ import Sidebar from 'Components/Sidebar'
 import UI from 'Assets/Images/Background/iu.jpg'
 import Main from 'Components/Main'
 import Header from 'Components/Header'
-// import Jennie from 'Assets/Images/Background/jennie.jpg'
-// import Jisoo from 'Assets/Images/Background/jisoo.jpg'
-// import Lisa from 'Assets/Images/Background/lisa.jpg'
-// import Rose from 'Assets/Images/Background/rose.jpg'
 
-// const listBg = [UI, Jennie, Jisoo, Lisa, Rose]
-
-const App = () => {
+const App = (props: any) => {
   return (
     <Fragment>
-      <div className="app-wrapper" style={{ backgroundImage: `url(${UI})` }}>
-        <Header />
-        <Sidebar />
-        <Main />
-        <Player />
-      </div>
+      <Router>
+        <div className="app-wrapper" style={{ backgroundImage: `url(${UI})` }}>
+          <Header />
+          <Sidebar />
+          <Main>
+            <Switch>
+              {routes.map((route: any, i: number) => (
+                <RouteWithSubRoutes key={i} {...route} {...props} />
+              ))}
+            </Switch>
+          </Main>
+          <Player />
+        </div>
+      </Router>
     </Fragment>
   )
 }
