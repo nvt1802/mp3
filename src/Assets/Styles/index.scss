@@ -2,8 +2,14 @@
   position: relative;
   // background-image: url('../Images/Background/iu.jpg');
   background-size: 1920px auto;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   display: flex;
   height: 100vh;
   // min-width: 768px;
+}
+
+@media all and (max-width: 768px) {
+  .app-wrapper{
+    overflow-x: auto;
+  }
 }

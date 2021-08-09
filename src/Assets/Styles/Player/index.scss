@@ -39,3 +39,9 @@ p {
     }
   }
 }
+
+@media all and (max-width: 768px) {
+  .player-controls__container{
+    min-width: unset !important;
+  }
+}

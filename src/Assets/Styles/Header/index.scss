@@ -90,5 +90,9 @@
 @media all and (max-width: 768px) {
   .header {
     left: 60px;
+    min-width: unset !important;
+  }
+  .btn-header{
+    display: none;
   }
 }
