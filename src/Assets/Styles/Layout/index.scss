@@ -1,1 +1,24 @@
+.sidebar-divide {
+  position: relative;
+  height: 1px;
+  &::after {
+    content: '';
+    border-top: 1px solid;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 0;
+    border-top-width: 1px;
+    border-top-style: groove;
+    border-top-color: rgba(0, 0, 0, 0.1);
+  }
+}
 
+@media all and (max-width: 768px) {
+  .sidebar-divide {
+    &::after {
+      left: 12px;
+      right: 12px;
+    }
+  }
+}

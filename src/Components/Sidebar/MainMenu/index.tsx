@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+import Divider from 'Components/Layout/Divider'
+
 const paths = [
   {
     path: '/my-music',
@@ -46,6 +48,7 @@ const MainMenu = () => {
           )
         })}
       </ul>
+      <Divider />
     </nav>
   )
 }
