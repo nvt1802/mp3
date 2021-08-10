@@ -10,13 +10,14 @@
   z-index: 99;
   min-width: 660px;
   .level {
+    display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
   }
   .level-left {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 1 !important;
     margin-right: 10px;
     align-items: center;
     justify-content: flex-start;
@@ -32,7 +33,37 @@
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
+    .setting-item {
+      position: relative;
+      margin-right: 10px;
+      cursor: pointer;
+      > .zm-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 999px;
+      }
+    }
   }
+}
+
+.icon-level-right {
+  width: 24px;
+  height: 24px;
+  color: #495057;
+  font-size: 20px;
+}
+
+.settings {
+  background-image: url('../../Images/Icon/settings.svg');
+  background-repeat: no-repeat;
+}
+.themes {
+  background-image: url('../../Images/Icon/layout.svg');
+  background-repeat: no-repeat;
 }
 
 .is-sticky {
@@ -41,6 +72,7 @@
 }
 
 .btn-header {
+  display: flex;
   font-size: 14px;
   border-radius: 999px;
   line-height: normal;
@@ -92,7 +124,7 @@
     left: 60px;
     min-width: unset !important;
   }
-  .btn-header{
+  .btn-header {
     display: none;
   }
 }
