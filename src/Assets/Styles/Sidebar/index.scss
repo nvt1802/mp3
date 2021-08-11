@@ -75,6 +75,9 @@
       }
     }
   }
+  .navbar-main-bottom {
+    display: none;
+  }
   .is-active {
     background-color: rgba(0, 0, 0, 0.05);
     border-left: 3px solid #409abc !important;
@@ -116,6 +119,14 @@
 
 .icon-radio {
   background-image: url('../../Images/Icon/signal.svg');
+}
+
+.icon-themes {
+  background-image: url('../../Images/Icon/layout.svg');
+}
+
+.icon-settings {
+  background-image: url('../../Images/Icon/settings.svg');
 }
 
 button,
@@ -182,6 +193,31 @@ li {
     padding: 15px !important;
     > span {
       display: none;
+    }
+  }
+  .navbar-main-bottom {
+    display: block !important;
+    position: absolute;
+    bottom: 70px;
+    .navbar-item-bottom {
+      font-weight: 700;
+      color: #32323d !important;
+      border-left: 3px solid transparent;
+      &:hover {
+        > a > span {
+          color: #409abc;
+        }
+      }
+      > a {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 7px 16px;
+        > span {
+          color: #32323d;
+        }
+      }
     }
   }
 }
